@@ -8,4 +8,8 @@ describe('Fraction', () => {
   it('should not accept 0 as numerator', () => {
     expect(() => new Fraction(0, 1)).toThrow(Error('invalid numerator'));
   });
+
+  it('should not accept 0 as denominator', () => {
+    expect(() => new Fraction(1, 0)).toThrow(Error('invalid denominator'));
+  });
 });
