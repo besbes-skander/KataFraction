@@ -21,5 +21,13 @@ describe('Fraction', () => {
     expect(addedFraction instanceof Fraction).toBeTruthy();
   });
 
+  it('Add function should return a Fraction(2, 1)', () => {
+    const fraction1 = new Fraction(1,1);
+    const fraction2 = new Fraction(1,1);
+    const addedFraction  = Fraction.add(fraction1, fraction2);
+
+    expect(addedFraction).toEqual(new Fraction(2, 1));
+  });
+
 
 });

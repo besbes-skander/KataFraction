@@ -3,11 +3,11 @@ export class Fraction {
   private readonly denominator: number;
 
   constructor(numerator: number, denominator: number) {
-    if(numerator === 0) {
+    if (numerator === 0) {
       throw Error('invalid numerator');
     }
 
-    if(denominator === 0) {
+    if (denominator === 0) {
       throw Error('invalid denominator');
     }
     this.numerator = numerator;
@@ -23,6 +23,9 @@ export class Fraction {
   }
 
   static add(fraction1: Fraction, fraction2: Fraction): Fraction {
-    return new Fraction(1,1);
+    const numerator = (fraction1.numerator * fraction2.denominator) + (fraction2.numerator * fraction1.denominator)
+    const denumerator = fraction1.denominator * fraction2.denominator;
+    
+    return new Fraction(numerator, denumerator);
   }
 }
