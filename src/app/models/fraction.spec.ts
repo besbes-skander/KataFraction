@@ -29,5 +29,11 @@ describe('Fraction', () => {
     expect(addedFraction).toEqual(new Fraction(2, 1));
   });
 
+  it('Should return a reduced Fraction(2, 1)', () => {
+    const fraction = new Fraction(4,2);
+
+    expect(fraction).toEqual(new Fraction(2, 1));
+  });
+
 
 });
