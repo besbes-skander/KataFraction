@@ -35,5 +35,13 @@ describe('Fraction', () => {
     expect(fraction).toEqual(new Fraction(2, 1));
   });
 
+  it('Add Should return a reduced Fraction(5, 4)', () => {
+    const fraction1 = new Fraction(2,4);
+    const fraction2 = new Fraction(6,8);
+    const addedFraction  = Fraction.add(fraction1, fraction2);
+
+    expect(addedFraction).toEqual(new Fraction(5, 4));
+  });
+
 
 });
