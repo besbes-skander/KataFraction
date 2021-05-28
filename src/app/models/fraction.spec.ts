@@ -12,4 +12,14 @@ describe('Fraction', () => {
   it('should not accept 0 as denominator', () => {
     expect(() => new Fraction(1, 0)).toThrow(Error('invalid denominator'));
   });
+
+  it('Add function should return a Fraction', () => {
+    const fraction1 = new Fraction(1,1);
+    const fraction2 = new Fraction(1,1);
+    const addedFraction  = Fraction.add(fraction1, fraction2);
+
+    expect(addedFraction instanceof Fraction).toBeTruthy();
+  });
+
+
 });
